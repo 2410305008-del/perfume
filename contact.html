@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Contact the Your Scent Concierge — book private fragrance consultations, corporate gifting inquiries, or order guidance." />
+  <title>Concierge & Contact | Your Scent Haute Parfumerie</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Contact Hero ── */
+    .contact-hero {
+      padding: 140px 5% 70px;
+      background: radial-gradient(circle at 80% 20%, var(--pink-light) 0%, var(--cream) 60%, var(--blue-light) 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      color: var(--text-dark);
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .contact-hero p {
+      font-size: 1rem;
+      color: var(--text-mid);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ── Contact Layout ── */
+    .contact-main {
+      padding: 80px 5% 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-form-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 44px 40px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+
+    .contact-form-card h2 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .contact-form-card > p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--cream);
+      color: var(--text-dark);
+      font-size: 0.9rem;
+      font-family: var(--font-sans);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 0 3px var(--gold-glow);
+      background: var(--surface);
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .info-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: var(--transition);
+    }
+
+    .info-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-gold);
+      box-shadow: var(--shadow-md);
+    }
+
+    .info-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--pink-light);
+      border: 1px solid var(--border-gold);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .info-card h4 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+
+    .info-card p {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+
+    .info-card a {
+      color: var(--gold-primary);
+      font-weight: 600;
+    }
+
+    /* ── FAQ Section ── */
+    .faq-section {
+      padding: 80px 5% 100px;
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 22px 28px;
+      text-align: left;
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .faq-question:hover {
+      color: var(--gold-primary);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 28px 24px;
+      font-size: 0.92rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      border-top: 1px dashed var(--border);
+      padding-top: 16px;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item.open .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    @media(max-width:992px) {
+      .contact-main { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">🌸</div>
+      <span class="brand-name">Your Scent</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Collection</a></li>
+      <li><a href="about.html">Atelier</a></li>
+      <li><a href="contact.html" class="active">Concierge</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-btn-icon" id="searchBtn" title="Search perfumes (Press /)">🔍</button>
+      <button class="nav-btn-icon" id="wishlistBtn" title="Wishlist">
+        🤍<span class="badge-count wishlist-count" style="display:none">0</span>
+      </button>
+      <button class="nav-btn-icon cart-btn" id="cartBtn" title="My Bag">
+        🛒<span class="badge-count cart-count" id="cartCount" style="display:none">0</span>
+      </button>
+      <button class="nav-btn-icon theme-toggle-btn" onclick="toggleTheme()" title="Switch Light/Dark Mood">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ MOBILE NAV ══ -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home <span>→</span></a>
+    <a href="shop.html">Collection <span>→</span></a>
+    <a href="about.html">Atelier <span>→</span></a>
+    <a href="contact.html">Concierge <span>→</span></a>
+  </div>
+
+  <!-- ══ CONTACT HERO ══ -->
+  <section class="contact-hero page-top">
+    <div class="section-tag">Private Concierge & Guidance</div>
+    <h1>We Await Your Inquiries</h1>
+    <p>Whether seeking personal olfactory counsel, bespoke corporate gifting, or vintage wedding fragrances, our master noses are at your disposal.</p>
+  </section>
+
+  <!-- ══ CONTACT MAIN ══ -->
+  <main class="contact-main">
+
+    <!-- Form -->
+    <div class="contact-form-card animate-in">
+      <h2>Send a Missive to the Atelier</h2>
+      <p>Fill out the details below and an olfactory specialist will respond within 24 hours.</p>
+
+      <form id="conciergeForm" onsubmit="handleConciergeSubmit(event)">
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" id="contactName" placeholder="Radhika Sharma" required />
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" id="contactEmail" placeholder="radhika@example.com" required />
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>Telephone</label>
+            <input type="tel" id="contactPhone" placeholder="+91 98765 43210" />
+          </div>
+          <div class="form-group">
+            <label>Inquiry Nature</label>
+            <select id="contactNature">
+              <option>Personal Fragrance Consultation</option>
+              <option>Corporate & Wedding Gifting</option>
+              <option>Bespoke Custom Flacon</option>
+              <option>Order & Shipping Assistance</option>
+              <option>Press & Editorial Collaboration</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Your Message *</label>
+          <textarea id="contactMessage" rows="5" placeholder="Describe your preferred olfactory notes, occasions, or custom gifting needs..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width:100%">Dispatch Inquiry to Atelier ✨</button>
+      </form>
+    </div>
+
+    <!-- Info Cards -->
+    <div class="contact-info animate-in" style="animation-delay:0.2s">
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <div>
+          <h4>The Flagship Atelier</h4>
+          <p>Maison Your Scent, 14 Raj Mahal Enclave<br />C-Scheme, Jaipur, Rajasthan 302001</p>
+          <p style="font-size:0.8rem;color:var(--text-light);margin-top:4px">Private appointments: Tue – Sun (11:00 AM – 7:30 PM)</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">✉️</div>
+        <div>
+          <h4>Direct Communication</h4>
+          <p>Email: <a href="mailto:concierge@yourscent.com">concierge@yourscent.com</a></p>
+          <p>WhatsApp Concierge: <a href="tel:+919829012345">+91 98290 12345</a></p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">🎁</div>
+        <div>
+          <h4>Bespoke Luxury Gifting</h4>
+          <p>Custom calligraphy engraving on glass flacons, wax-sealed gold ribbons, and velvet presentation boxes available upon request.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ══ FAQ SECTION ══ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header center animate-in">
+        <div class="section-tag">Frequently Answered</div>
+        <h2 class="section-title">Atelier Inquiries</h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item animate-in">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>What is the concentration and longevity of Your Scent fragrances?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            All Your Scent creations are formulated at pure <strong>Extrait de Parfum / Eau de Parfum</strong> concentration (22%–26% pure aromatic oils). This provides a rich longevity lasting 10 to 14 hours on skin and upwards of 24 hours on cashmere, silk, or wool garments.
+          </div>
+        </div>
+
+        <div class="faq-item animate-in" style="animation-delay:0.1s">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Are Your Scent perfumes vegan and cruelty-free?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes, uncompromisingly. We never test on animals and refuse any animal-derived fixatives (such as natural civet or deer musk). All warm animalic base notes are replicated through pure botanical resins and ethical amber accords.
+          </div>
+        </div>
+
+        <div class="faq-item animate-in" style="animation-delay:0.2s">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Can I sample fragrances before purchasing a 50ml or 100ml flacon?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Every full bottle order includes two complimentary 2ml sample vials of other scents. Additionally, our 3-Piece Discovery Box allows you to choose any three 30ml travel sprays to experience them in your daily life.
+          </div>
+        </div>
+
+        <div class="faq-item animate-in" style="animation-delay:0.3s">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>What is your courier delivery and return policy?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            We provide complimentary signature courier delivery across India within 3–5 business days. We offer hassle-free 14-day exchanges on unopened, sealed flacons.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">Your Scent 🌸</div>
+        <p>High-perfumery atelier dedicated to natural, botanical masterworks inspired by the earth's grandest aromas.</p>
+        <div class="footer-socials">
+          <a class="social-btn" href="#">📷</a>
+          <a class="social-btn" href="#">📘</a>
+          <a class="social-btn" href="#">📌</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Collection</a></li>
+          <li><a href="about.html">Atelier</a></li>
+          <li><a href="contact.html">Concierge</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Families</h4>
+        <ul>
+          <li><a href="shop.html?filter=floral">Floral Symphony</a></li>
+          <li><a href="shop.html?filter=fresh">Fresh Citrus</a></li>
+          <li><a href="shop.html?filter=aquatic">Aquatic Reverie</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Atelier Chat</h4>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:14px">Immediate answers on orders, notes, and private appointments.</p>
+        <button class="btn-secondary" onclick="toggleChatbot()" style="color:#fff;border-color:var(--gold-primary)">Launch Assistant 💬</button>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <span>© 2026 Your Scent Haute Parfumerie. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ SHARED MODALS ══ -->
+  <div class="drawer-overlay" id="cartOverlay"></div>
+  <aside class="side-drawer" id="cartSidebar">
+    <div class="drawer-header"><h3>🛍️ Shopping Bag</h3><button class="drawer-close" id="cartClose">✕</button></div>
+    <div class="drawer-items" id="cartItems"></div>
+    <div class="drawer-footer">
+      <div class="drawer-total-row"><span class="drawer-total-label">Subtotal</span><span class="drawer-total-val" id="cartTotal">₹0</span></div>
+      <button class="btn-primary drawer-btn" onclick="openCheckoutModal()">Proceed to Checkout →</button>
+    </div>
+  </aside>
+
+  <div class="drawer-overlay" id="wishlistOverlay"></div>
+  <aside class="side-drawer" id="wishlistDrawer">
+    <div class="drawer-header"><h3>🤍 My Wishlist</h3><button class="drawer-close" id="wishlistClose">✕</button></div>
+    <div class="drawer-items" id="wishlistItems"></div>
+    <div class="drawer-footer"><button class="btn-secondary drawer-btn" onclick="closeWishlist()">Continue Exploring →</button></div>
+  </aside>
+
+  <div class="search-modal-overlay" id="searchModal">
+    <div class="search-modal-box">
+      <div class="search-input-header">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="modalSearchInput" placeholder="Search by name, scent accord, or mood..." />
+        <button class="drawer-close" id="searchModalClose" style="width:30px;height:30px;font-size:12px">✕</button>
+      </div>
+      <div class="search-results-box" id="searchResultsBox"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="quickview-card">
+      <button class="quickview-close" onclick="closeQuickView()">✕</button>
+      <div class="quickview-media"><img id="qvImg" src="images/perfume-rose.png" alt="Perfume Preview" /></div>
+      <div class="quickview-details">
+        <div class="quickview-tag" id="qvTag">Floral Collection</div>
+        <h2 class="quickview-title" id="qvTitle">Rose Bloom</h2>
+        <div class="quickview-rating" id="qvRating">★ 4.9 (312 reviews)</div>
+        <div class="quickview-price-wrap"><span class="quickview-price" id="qvPrice">₹2,499</span></div>
+        <p class="quickview-desc" id="qvDesc"></p>
+        <div class="size-options" id="qvSizes"></div>
+        <div class="quickview-actions">
+          <button class="btn-primary" style="flex:1" onclick="addQuickViewToCart()">Add to Bag 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Multi-Step Checkout Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="checkout-card">
+      <button class="quickview-close" onclick="closeCheckoutModal()">✕</button>
+      <div class="checkout-stepper">
+        <div class="step-item active"><div class="step-circle">1</div><div class="step-label">Delivery</div></div>
+        <div class="step-item"><div class="step-circle">2</div><div class="step-label">Review</div></div>
+        <div class="step-item"><div class="step-circle">3</div><div class="step-label">Payment</div></div>
+        <div class="step-item"><div class="step-circle">4</div><div class="step-label">Confirmed</div></div>
+      </div>
+      <div class="checkout-step-content active" id="coStep1">
+        <h3 style="font-family:var(--font-serif);margin-bottom:12px">Shipping Details</h3>
+        <div class="form-grid-2">
+          <div class="checkout-input-group"><label>Recipient Name *</label><input type="text" id="shipName" placeholder="Radhika Sharma" required /></div>
+          <div class="checkout-input-group"><label>Phone Number *</label><input type="tel" id="shipPhone" placeholder="+91 98765 43210" required /></div>
+        </div>
+        <div class="checkout-input-group"><label>Street Address *</label><input type="text" id="shipAddress" placeholder="Suite, Street" required /></div>
+        <div style="display:flex;justify-content:flex-end;margin-top:20px"><button class="btn-primary" onclick="nextCheckoutStep()">Continue to Review →</button></div>
+      </div>
+      <div class="checkout-step-content" id="coStep2">
+        <h3 style="font-family:var(--font-serif);margin-bottom:12px">Review & Promo</h3>
+        <div id="checkoutItemsReview" style="margin-bottom:16px"></div>
+        <div style="display:flex;justify-content:space-between"><button class="btn-secondary" onclick="prevCheckoutStep()">← Back</button><button class="btn-primary" onclick="nextCheckoutStep()">Payment →</button></div>
+      </div>
+      <div class="checkout-step-content" id="coStep3">
+        <h3 style="font-family:var(--font-serif);margin-bottom:12px">Payment</h3>
+        <div class="payment-methods-grid">
+          <div class="payment-tab active" onclick="selectPaymentMethod('upi', this)"><div class="pay-icon">📱</div><div class="pay-title">UPI / QR</div></div>
+          <div class="payment-tab" onclick="selectPaymentMethod('cod', this)"><div class="pay-icon">📦</div><div class="pay-title">Cash on Delivery</div></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:20px"><button class="btn-secondary" onclick="prevCheckoutStep()">← Back</button><button class="btn-primary" id="placeOrderBtn" onclick="nextCheckoutStep()">Authorize Order ✨</button></div>
+      </div>
+      <div class="checkout-step-content" id="coStep4">
+        <div class="order-success-view">
+          <div class="order-success-icon">✓</div>
+          <h2>Order Confirmed</h2>
+          <div class="order-id-badge">Order ID: <span id="confirmedOrderId">YS-2026-894120</span></div>
+          <button class="btn-primary" onclick="closeCheckoutModal()">Return to Boutique</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- Chatbot Widget -->
+  <div id="chatbot-container">
+    <button id="chatbot-toggle" onclick="toggleChatbot()" title="Chat with Atelier Assistant">
+      <span id="chat-icon">💬</span>
+    </button>
+    <div id="chatbot-box">
+      <div id="chatbot-header">
+        <span>🌸 Your Scent Atelier Assistant</span>
+        <button onclick="toggleChatbot()" id="chatbot-close">✕</button>
+      </div>
+      <iframe src="https://www.chatbase.co/chatbot-iframe/uSy50_rFKP0U2ORtni0Ep" width="100%"
+        style="height:100%; min-height:420px; border:none;" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

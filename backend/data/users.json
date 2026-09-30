@@ -1,0 +1,20 @@
+[
+  {
+    "id": "USR-1789545909602-5543",
+    "name": "Claire Delacroix",
+    "email": "claire@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "passwordHash": "CRIQFhkbCxdSV10=",
+    "createdAt": "2026-09-16T08:05:09.603Z",
+    "role": "member"
+  },
+  {
+    "id": "USR-1790143538800-3721",
+    "name": "Antoine Moreau",
+    "email": "antoine@grasse-atelier.com",
+    "phone": "+33 6 12 34 56 78+33 6 12 34 56 78",
+    "passwordHash": "CRIQFhkbCxdSV10=",
+    "createdAt": "2026-09-23T06:05:38.801Z",
+    "role": "member"
+  }
+]

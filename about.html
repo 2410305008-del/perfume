@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="About Your Scent Haute Parfumerie — our atelier heritage, ethical botanical sourcing from Grasse to Mysore, and the master perfumers behind each fragrance." />
+  <title>The Atelier & Heritage | Your Scent Haute Parfumerie</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── About Hero ── */
+    .about-hero {
+      padding: 140px 5% 80px;
+      background: radial-gradient(circle at 80% 20%, var(--pink-light) 0%, var(--cream) 60%, var(--lavender) 100%);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: var(--text-dark);
+      line-height: 1.15;
+      margin-bottom: 22px;
+      font-weight: 700;
+    }
+
+    .about-hero p {
+      font-size: 1.02rem;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 18px;
+    }
+
+    .hero-img-stack {
+      position: relative;
+      width: 100%;
+      height: 440px;
+    }
+
+    .hero-img-stack .img-main {
+      width: 78%;
+      height: 390px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 5px solid var(--surface);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .hero-img-stack .img-accent {
+      width: 58%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border: 5px solid var(--surface);
+      animation: float 8s ease-in-out infinite 1s;
+    }
+
+    /* ── Numbers ── */
+    .about-numbers {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 5%;
+    }
+
+    .numbers-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      text-align: center;
+    }
+
+    .number-card {
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      padding: 30px 16px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .number-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .number-card span {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      font-weight: 700;
+      background: var(--gold-metallic);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 6px;
+    }
+
+    .number-card p {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-mid);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* ── Story Section ── */
+    .story-section {
+      padding: 100px 5%;
+      background: var(--cream);
+    }
+
+    .story-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .story-img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      border: 5px solid var(--surface);
+    }
+
+    .story-text h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .story-text p {
+      font-size: 0.96rem;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+
+    /* ── Botanicals Sourcing ── */
+    .ingredients-section {
+      padding: 100px 5%;
+      background: radial-gradient(circle, var(--pink-light) 0%, var(--cream) 100%);
+    }
+
+    .ingr-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .ingr-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 38px 30px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .ingr-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold-primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .ingr-emoji {
+      font-size: 3rem;
+      margin-bottom: 18px;
+    }
+
+    .ingr-card h4 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+
+    .ingr-card p {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.65;
+    }
+
+    /* ── Team Section ── */
+    .team-section {
+      padding: 100px 5%;
+      background: var(--surface);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .team-card {
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      padding: 36px 30px;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-gold);
+      box-shadow: var(--shadow-md);
+    }
+
+    .team-avatar {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      margin: 0 auto 18px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-gold);
+    }
+
+    .team-card h4 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+
+    .team-card .role {
+      font-size: 0.8rem;
+      color: var(--gold-primary);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .team-card p {
+      font-size: 0.86rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+
+    @media(max-width:992px) {
+      .about-hero-inner, .story-inner { grid-template-columns: 1fr; }
+      .hero-img-stack { height: 320px; }
+      .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+      .ingr-grid, .team-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">🌸</div>
+      <span class="brand-name">Your Scent</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Collection</a></li>
+      <li><a href="about.html" class="active">Atelier</a></li>
+      <li><a href="contact.html">Concierge</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-btn-icon" id="searchBtn" title="Search perfumes (Press /)">🔍</button>
+      <button class="nav-btn-icon" id="wishlistBtn" title="Wishlist">
+        🤍<span class="badge-count wishlist-count" style="display:none">0</span>
+      </button>
+      <button class="nav-btn-icon cart-btn" id="cartBtn" title="My Bag">
+        🛒<span class="badge-count cart-count" id="cartCount" style="display:none">0</span>
+      </button>
+      <button class="nav-btn-icon theme-toggle-btn" onclick="toggleTheme()" title="Switch Light/Dark Mood">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ MOBILE NAV ══ -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home <span>→</span></a>
+    <a href="shop.html">Collection <span>→</span></a>
+    <a href="about.html">Atelier <span>→</span></a>
+    <a href="contact.html">Concierge <span>→</span></a>
+  </div>
+
+  <!-- ══ ABOUT HERO ══ -->
+  <section class="about-hero page-top">
+    <div class="about-hero-inner">
+      <div class="animate-in">
+        <div class="section-tag">Haute Parfumerie Heritage</div>
+        <h1>Born from the Earth's<br /><span class="text-gradient">Most Sacred Blooms</span></h1>
+        <p>Your Scent was conceived from a single, unyielding conviction: that a fragrance is not mere cosmetics, but an invisible cathedral of memory, emotion, and intimacy.</p>
+        <p>Founded in 2018 in the historic royal city of Jaipur and trained under the century-old dynasties of Grasse, France, our master noses distil nature's most elusive moments into wearable liquid poetry.</p>
+        <a href="shop.html" class="btn-primary" style="margin-top:14px">Explore The Collection →</a>
+      </div>
+      <div class="hero-img-stack animate-in" style="animation-delay:0.2s">
+        <img src="images/about-hero.png" alt="Your Scent botanical garden" class="img-main" />
+        <img src="images/about-story.png" alt="Haute Parfumerie atelier laboratory" class="img-accent" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ NUMBERS ══ -->
+  <div class="about-numbers">
+    <div class="numbers-grid">
+      <div class="number-card animate-in">
+        <span>50+</span>
+        <p>Rare Botanical Distillates</p>
+      </div>
+      <div class="number-card animate-in" style="animation-delay:0.1s">
+        <span>10K+</span>
+        <p>Adoring Connoisseurs</p>
+      </div>
+      <div class="number-card animate-in" style="animation-delay:0.2s">
+        <span>8+</span>
+        <p>Years of Olfactory Art</p>
+      </div>
+      <div class="number-card animate-in" style="animation-delay:0.3s">
+        <span>100%</span>
+        <p>Sustainable Harvest</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ THE ATELIER STORY ══ -->
+  <section class="story-section">
+    <div class="story-inner">
+      <img src="images/about-story.png" alt="Distilling perfume flacons" class="story-img animate-in" />
+      <div class="story-text animate-in" style="animation-delay:0.2s">
+        <div class="section-tag">Our Craft</div>
+        <h2>Patience, Alchemy, and Respect for Nature</h2>
+        <p>Unlike commercial perfumes compounded with petrochemicals, our scents undergo a traditional 6-week slow maturation in chilled French oak casks. This gentle maceration marries the delicate top notes of citrus with deep base resins of sandalwood and amber.</p>
+        <p>Every bottle is individually inspected, filled by hand, and sealed with our signature gold emblem before journeying to your vanity.</p>
+        <div style="display:flex;gap:14px;margin-top:24px">
+          <a href="shop.html" class="btn-secondary">View Fragrances</a>
+          <a href="contact.html" class="btn-primary">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ INGREDIENTS ══ -->
+  <section class="ingredients-section">
+    <div class="container">
+      <div class="section-header center animate-in">
+        <div class="section-tag">Sourcing Sanctuary</div>
+        <h2 class="section-title">Ethical Botanical Treasures</h2>
+        <p class="section-sub">We partner directly with generational farmers across the globe to secure rare, unadulterated harvests.</p>
+      </div>
+      <div class="ingr-grid">
+        <div class="ingr-card animate-in">
+          <div class="ingr-emoji">🌹</div>
+          <h4>Grasse Centifolia Rose</h4>
+          <p>Hand-harvested at dawn in May in Provence, France, capturing dewy petals before the midday sun evaporates their vital essence.</p>
+        </div>
+        <div class="ingr-card animate-in" style="animation-delay:0.1s">
+          <div class="ingr-emoji">🍋</div>
+          <h4>Sicilian Citrus Peel</h4>
+          <p>Cold-pressed lemon and bergamot peel from organic orchards along the sun-drenched Ionian coastline.</p>
+        </div>
+        <div class="ingr-card animate-in" style="animation-delay:0.2s">
+          <div class="ingr-emoji">🪵</div>
+          <h4>Mysore Sandalwood</h4>
+          <p>Sustainably government-licensed royal Indian sandalwood providing that inimitable warm, creamy, and velvety dry-down.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MASTER NOSES ══ -->
+  <section class="team-section">
+    <div class="container">
+      <div class="section-header center animate-in">
+        <div class="section-tag">The Creatives</div>
+        <h2 class="section-title">The Noses of Your Scent</h2>
+        <p class="section-sub">A union of classic French perfumery discipline and rich Eastern botanical wisdom.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card animate-in">
+          <div class="team-avatar" style="background:linear-gradient(135deg,var(--pink-light),var(--pink-soft))">👩</div>
+          <h4>Aisha Mehra</h4>
+          <div class="role">Founder & Master Perfumer</div>
+          <p>Alumni of ISIPCA in Versailles with 15 years mastering natural floral distillations and modern minimalist flacons.</p>
+        </div>
+        <div class="team-card animate-in" style="animation-delay:0.1s">
+          <div class="team-avatar" style="background:linear-gradient(135deg,var(--gold-light),#fff)">👨</div>
+          <h4>Rohan Singh</h4>
+          <div class="role">Head of Sourcing & Terroir</div>
+          <p>Travels the world visiting fair-trade cooperatives to ensure 100% ethical, pesticide-free harvest contracts.</p>
+        </div>
+        <div class="team-card animate-in" style="animation-delay:0.2s">
+          <div class="team-avatar" style="background:linear-gradient(135deg,var(--blue-light),var(--blue-soft))">👩</div>
+          <h4>Priya Kapoor</h4>
+          <div class="role">Olfactory Designer</div>
+          <p>Specialist in marine calones and sparkling citrus accords that evoke the tranquility of global coastlines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">Your Scent 🌸</div>
+        <p>High-perfumery atelier dedicated to natural, botanical masterworks inspired by the earth's grandest aromas.</p>
+        <div class="footer-socials">
+          <a class="social-btn" href="#">📷</a>
+          <a class="social-btn" href="#">📘</a>
+          <a class="social-btn" href="#">📌</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Collection</a></li>
+          <li><a href="about.html">Atelier</a></li>
+          <li><a href="contact.html">Concierge</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Families</h4>
+        <ul>
+          <li><a href="shop.html?filter=floral">Floral Symphony</a></li>
+          <li><a href="shop.html?filter=fresh">Fresh Citrus</a></li>
+          <li><a href="shop.html?filter=aquatic">Aquatic Reverie</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Concierge</h4>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:14px">Need bespoke gifting assistance? We are at your service.</p>
+        <button class="btn-secondary" onclick="toggleChatbot()" style="color:#fff;border-color:var(--gold-primary)">Chat with Concierge 💬</button>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <span>© 2026 Your Scent Haute Parfumerie. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ SHARED MODALS ══ -->
+  <div class="drawer-overlay" id="cartOverlay"></div>
+  <aside class="side-drawer" id="cartSidebar">
+    <div class="drawer-header"><h3>🛍️ Shopping Bag</h3><button class="drawer-close" id="cartClose">✕</button></div>
+    <div class="drawer-items" id="cartItems"></div>
+    <div class="drawer-footer">
+      <div class="drawer-total-row"><span class="drawer-total-label">Subtotal</span><span class="drawer-total-val" id="cartTotal">₹0</span></div>
+      <button class="btn-primary drawer-btn" onclick="openCheckoutModal()">Proceed to Checkout →</button>
+    </div>
+  </aside>
+
+  <div class="drawer-overlay" id="wishlistOverlay"></div>
+  <aside class="side-drawer" id="wishlistDrawer">
+    <div class="drawer-header"><h3>🤍 My Wishlist</h3><button class="drawer-close" id="wishlistClose">✕</button></div>
+    <div class="drawer-items" id="wishlistItems"></div>
+    <div class="drawer-footer"><button class="btn-secondary drawer-btn" onclick="closeWishlist()">Continue Exploring →</button></div>
+  </aside>
+
+  <div class="search-modal-overlay" id="searchModal">
+    <div class="search-modal-box">
+      <div class="search-input-header">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="modalSearchInput" placeholder="Search by name, scent accord, or mood..." />
+        <button class="drawer-close" id="searchModalClose" style="width:30px;height:30px;font-size:12px">✕</button>
+      </div>
+      <div class="search-results-box" id="searchResultsBox"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="quickview-card">
+      <button class="quickview-close" onclick="closeQuickView()">✕</button>
+      <div class="quickview-media"><img id="qvImg" src="images/perfume-rose.png" alt="Perfume Preview" /></div>
+      <div class="quickview-details">
+        <div class="quickview-tag" id="qvTag">Floral Collection</div>
+        <h2 class="quickview-title" id="qvTitle">Rose Bloom</h2>
+        <div class="quickview-rating" id="qvRating">★ 4.9 (312 reviews)</div>
+        <div class="quickview-price-wrap"><span class="quickview-price" id="qvPrice">₹2,499</span></div>
+        <p class="quickview-desc" id="qvDesc"></p>
+        <div class="size-options" id="qvSizes"></div>
+        <div class="quickview-actions">
+          <button class="btn-primary" style="flex:1" onclick="addQuickViewToCart()">Add to Bag 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Multi-Step Checkout Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="checkout-card">
+      <button class="quickview-close" onclick="closeCheckoutModal()">✕</button>
+      <div class="checkout-stepper">
+        <div class="step-item active"><div class="step-circle">1</div><div class="step-label">Delivery</div></div>
+        <div class="step-item"><div class="step-circle">2</div><div class="step-label">Review</div></div>
+        <div class="step-item"><div class="step-circle">3</div><div class="step-label">Payment</div></div>
+        <div class="step-item"><div class="step-circle">4</div><div class="step-label">Confirmed</div></div>
+      </div>
+      <div class="checkout-step-content active" id="coStep1">
+        <h3 style="font-family:var(--font-serif);margin-bottom:12px">Shipping Details</h3>
+        <div class="form-grid-2">
+          <div class="checkout-input-group"><label>Recipient Name *</label><input type="text" id="shipName" placeholder="Radhika Sharma" required /></div>
+          <div class="checkout-input-group"><label>Phone Number *</label><input type="tel" id="shipPhone" placeholder="+91 98765 43210" required /></div>
+        </div>
+        <div class="checkout-input-group"><label>Street Address *</label><input type="text" id="shipAddress" placeholder="Suite, Street" required /></div>
+        <div style="display:flex;justify-content:flex-end;margin-top:20px"><button class="btn-primary" onclick="nextCheckoutStep()">Continue to Review →</button></div>
+      </div>
+      <div class="checkout-step-content" id="coStep2">
+        <h3 style="font-family:var(--font-serif);margin-bottom:12px">Review & Promo</h3>
+        <div id="checkoutItemsReview" style="margin-bottom:16px"></div>
+        <div style="display:flex;justify-content:space-between"><button class="btn-secondary" onclick="prevCheckoutStep()">← Back</button><button class="btn-primary" onclick="nextCheckoutStep()">Payment →</button></div>
+      </div>
+      <div class="checkout-step-content" id="coStep3">
+        <h3 style="font-family:var(--font-serif);margin-bottom:12px">Payment</h3>
+        <div class="payment-methods-grid">
+          <div class="payment-tab active" onclick="selectPaymentMethod('upi', this)"><div class="pay-icon">📱</div><div class="pay-title">UPI / QR</div></div>
+          <div class="payment-tab" onclick="selectPaymentMethod('cod', this)"><div class="pay-icon">📦</div><div class="pay-title">Cash on Delivery</div></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:20px"><button class="btn-secondary" onclick="prevCheckoutStep()">← Back</button><button class="btn-primary" id="placeOrderBtn" onclick="nextCheckoutStep()">Authorize Order ✨</button></div>
+      </div>
+      <div class="checkout-step-content" id="coStep4">
+        <div class="order-success-view">
+          <div class="order-success-icon">✓</div>
+          <h2>Order Confirmed</h2>
+          <div class="order-id-badge">Order ID: <span id="confirmedOrderId">YS-2026-894120</span></div>
+          <button class="btn-primary" onclick="closeCheckoutModal()">Return to Boutique</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- Chatbot Widget -->
+  <div id="chatbot-container">
+    <button id="chatbot-toggle" onclick="toggleChatbot()" title="Chat with Atelier Assistant">
+      <span id="chat-icon">💬</span>
+    </button>
+    <div id="chatbot-box">
+      <div id="chatbot-header">
+        <span>🌸 Your Scent Atelier Assistant</span>
+        <button onclick="toggleChatbot()" id="chatbot-close">✕</button>
+      </div>
+      <iframe src="https://www.chatbase.co/chatbot-iframe/uSy50_rFKP0U2ORtni0Ep" width="100%"
+        style="height:100%; min-height:420px; border:none;" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

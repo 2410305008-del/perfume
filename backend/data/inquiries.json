@@ -1,0 +1,12 @@
+[
+  {
+    "id": "INQ-1788935785528",
+    "createdAt": "2026-09-09T06:36:25.528Z",
+    "name": "Radhika Sharma",
+    "email": "radhika@example.com",
+    "phone": "+91 98765 43210",
+    "inquiryNature": "Personal Fragrance Consultation",
+    "message": "I am looking for a custom wedding perfume with jasmine and amber.",
+    "status": "received"
+  }
+]

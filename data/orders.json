@@ -1,0 +1,37 @@
+[
+  {
+    "orderId": "YS-2026-969507",
+    "createdAt": "2026-09-09T06:36:25.510Z",
+    "status": "confirmed",
+    "shipping": {
+      "name": "Radhika Sharma",
+      "phone": "+91 98765 43210",
+      "email": "radhika@example.com",
+      "address": "14 Marine Drive",
+      "city": "Mumbai",
+      "pincode": "400001"
+    },
+    "payment": {
+      "method": "upi",
+      "status": "authorized"
+    },
+    "pricing": {
+      "subtotal": 2499,
+      "discount": 250,
+      "promoCode": "SCENT10",
+      "delivery": "FREE",
+      "total": 2249
+    },
+    "items": [
+      {
+        "id": 1,
+        "name": "Rose Bloom",
+        "size": "50ml",
+        "price": 2499,
+        "qty": 1,
+        "total": 2499
+      }
+    ],
+    "estimatedDelivery": "3–5 Business Days"
+  }
+]

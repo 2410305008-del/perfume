@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Your Scent — Haute Parfumerie. Discover handcrafted floral, fresh citrus, and aquatic perfumes inspired by nature's finest botanicals." />
+  <title>Your Scent | Luxury Perfumes & Haute Parfumerie</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="home.css" />
+</head>
+
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">🌸</div>
+      <span class="brand-name">Your Scent</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="shop.html">Collection</a></li>
+      <li><a href="about.html">Atelier</a></li>
+      <li><a href="contact.html">Concierge</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-btn-icon" id="searchBtn" title="Search perfumes (Press /)">🔍</button>
+      <button class="nav-btn-icon" id="wishlistBtn" title="Wishlist">
+        🤍<span class="badge-count wishlist-count" style="display:none">0</span>
+      </button>
+      <button class="nav-btn-icon cart-btn" id="cartBtn" title="My Bag">
+        🛒<span class="badge-count cart-count" id="cartCount" style="display:none">0</span>
+      </button>
+      <button class="nav-btn-icon theme-toggle-btn" onclick="toggleTheme()" title="Switch Light/Dark Mood">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ MOBILE NAV ══ -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home <span>→</span></a>
+    <a href="shop.html">Collection <span>→</span></a>
+    <a href="about.html">Atelier <span>→</span></a>
+    <a href="contact.html">Concierge <span>→</span></a>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text animate-in">
+        <div class="hero-tag">✨ Maison de Haute Parfumerie</div>
+        <h1 class="hero-title">
+          Wear the Pure<br />
+          <span class="text-gradient">Poetry of Scent</span>
+        </h1>
+        <p class="hero-sub">
+          Handcrafted perfumes distilled from morning-harvested Grasse roses,
+          sun-kissed Mediterranean citrus groves, and salty ocean currents.
+          Discover your bespoke signature fragrance.
+        </p>
+        <div class="hero-actions">
+          <a href="shop.html" class="btn-primary">Explore Fragrances →</a>
+          <a href="#scent-quiz" class="btn-secondary">Find Your Scent Quiz</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span>50+</span><em>Rare Botanicals</em></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span>100%</span><em>Ethical & Pure</em></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span>12H+</span><em>Long Sillage</em></div>
+        </div>
+      </div>
+      <div class="hero-visual animate-in" style="animation-delay:0.2s">
+        <div class="hero-img-ring"></div>
+        <div class="hero-img-ring ring-2"></div>
+        <img src="images/hero.png" alt="Your Scent signature luxury perfume flacon" class="hero-img" />
+        <div class="hero-float-card card-1" onclick="openQuickView(1)">
+          <span>🌸</span> Rose Bloom
+        </div>
+        <div class="hero-float-card card-2" onclick="openQuickView(4)">
+          <span>🍋</span> Citrus Glow
+        </div>
+        <div class="hero-float-card card-3" onclick="openQuickView(6)">
+          <span>🌊</span> Ocean Mist
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ══ MARQUEE ══ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>🌸 Grasse Rose</span><span>🍋 Sicilian Lemon</span><span>🌊 Ocean Mist</span>
+      <span>🌿 Provence Lavender</span><span>🌼 Sambac Jasmine</span><span>✨ 100% Natural Distillate</span>
+      <span>🌸 Grasse Rose</span><span>🍋 Sicilian Lemon</span><span>🌊 Ocean Mist</span>
+      <span>🌿 Provence Lavender</span><span>🌼 Sambac Jasmine</span><span>✨ 100% Natural Distillate</span>
+    </div>
+  </div>
+
+  <!-- ══ CATEGORIES ══ -->
+  <section class="section cat-section" id="categories">
+    <div class="section-header center animate-in">
+      <div class="section-tag">Olfactory Families</div>
+      <h2 class="section-title">The Three Scent Worlds</h2>
+      <p class="section-sub">Each collection is an intimate voyage through nature's most enchanting aromas.</p>
+    </div>
+    <div class="cat-grid">
+      <a href="shop.html?filter=floral" class="cat-card cat-floral animate-in">
+        <div class="cat-icon">🌸</div>
+        <h3>Floral Symphony</h3>
+        <p>Rose de Mai, Sambac Jasmine, French Lavender & Sakura</p>
+        <div class="cat-arrow">Discover Collection →</div>
+      </a>
+      <a href="shop.html?filter=fresh" class="cat-card cat-fresh animate-in" style="animation-delay:0.1s">
+        <div class="cat-icon">🍋</div>
+        <h3>Sunlit Citrus</h3>
+        <p>Sicilian Lemon, Japanese Yuzu & Neroli Blossom</p>
+        <div class="cat-arrow">Discover Collection →</div>
+      </a>
+      <a href="shop.html?filter=aquatic" class="cat-card cat-aquatic animate-in" style="animation-delay:0.2s">
+        <div class="cat-icon">🌊</div>
+        <h3>Aquatic Reverie</h3>
+        <p>Marine Salt Air, Water Lily, Driftwood & Mountain Rain</p>
+        <div class="cat-arrow">Discover Collection →</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══ BESTSELLERS ══ -->
+  <section class="section section-pink" id="bestsellers">
+    <div class="container">
+      <div class="section-header animate-in">
+        <div class="section-tag">Curated Iconics</div>
+        <h2 class="section-title">Our Most Beloved Fragrances</h2>
+        <p class="section-sub">Acclaimed by perfumers and cherished worldwide for their enduring sillage and emotional resonance.</p>
+      </div>
+      <div class="products-grid" id="homeProducts"></div>
+      <div style="text-align:center;margin-top:54px">
+        <a href="shop.html" class="btn-primary">View All 8 Fragrances →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ INTERACTIVE SCENT QUIZ ══ -->
+  <section class="section" id="scent-quiz" style="background: radial-gradient(circle at center, var(--pink-light) 0%, var(--cream) 100%);">
+    <div class="container">
+      <div class="section-header center animate-in">
+        <div class="section-tag">Bespoke Fragrance Consultation</div>
+        <h2 class="section-title">Find Your Signature Scent</h2>
+        <p class="section-sub">Answer 3 intuitive questions to reveal the fragrance crafted for your aura.</p>
+      </div>
+
+      <div class="quiz-card animate-in">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="quizProgressFill"></div>
+        </div>
+
+        <!-- Question 1 -->
+        <div id="quizStep1">
+          <div class="quiz-question-title">1. What atmosphere resonates most with you today?</div>
+          <div class="quiz-question-sub">Choose the mood that speaks to your spirit.</div>
+          <div class="quiz-options-grid">
+            <button class="quiz-option-btn" onclick="selectQuizOption('vibe', 'floral', this)">
+              <div class="quiz-option-emoji">🌸</div>
+              <div class="quiz-option-text">
+                <h4>Romantic & Velvety</h4>
+                <p>Blooming gardens, dewy rose petals, gentle elegance</p>
+              </div>
+            </button>
+            <button class="quiz-option-btn" onclick="selectQuizOption('vibe', 'fresh', this)">
+              <div class="quiz-option-emoji">🍋</div>
+              <div class="quiz-option-text">
+                <h4>Vibrant & Zesty</h4>
+                <p>Sunlight, citrus peel, sparkling morning optimism</p>
+              </div>
+            </button>
+            <button class="quiz-option-btn" onclick="selectQuizOption('vibe', 'aquatic', this)">
+              <div class="quiz-option-emoji">🌊</div>
+              <div class="quiz-option-text">
+                <h4>Pure & Oceanic</h4>
+                <p>Sea breeze, salty driftwood, fresh rain clarity</p>
+              </div>
+            </button>
+            <button class="quiz-option-btn" onclick="selectQuizOption('vibe', 'mysterious', this)">
+              <div class="quiz-option-emoji">🌙</div>
+              <div class="quiz-option-text">
+                <h4>Seductive & Warm</h4>
+                <p>Golden amber, Mysore sandalwood, night jasmine</p>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div id="quizStep2" style="display:none">
+          <div class="quiz-question-title">2. When will you wear this fragrance most?</div>
+          <div class="quiz-question-sub">Define the setting for your signature trail.</div>
+          <div class="quiz-options-grid">
+            <button class="quiz-option-btn" onclick="selectQuizOption('occasion', 'everyday', this)">
+              <div class="quiz-option-emoji">🕊️</div>
+              <div class="quiz-option-text">
+                <h4>Daily Signature</h4>
+                <p>Subtle, effortless luxury for meetings and coffee dates</p>
+              </div>
+            </button>
+            <button class="quiz-option-btn" onclick="selectQuizOption('occasion', 'evening', this)">
+              <div class="quiz-option-emoji">🥂</div>
+              <div class="quiz-option-text">
+                <h4>Gala & Intimate Evenings</h4>
+                <p>Rich, lingering sillage that turns heads</p>
+              </div>
+            </button>
+            <button class="quiz-option-btn" onclick="selectQuizOption('occasion', 'romantic', this)">
+              <div class="quiz-option-emoji">🌹</div>
+              <div class="quiz-option-text">
+                <h4>Romantic Rendezvous</h4>
+                <p>Soft, alluring floral notes that invite intimacy</p>
+              </div>
+            </button>
+            <button class="quiz-option-btn" onclick="selectQuizOption('occasion', 'daytime', this)">
+              <div class="quiz-option-emoji">☀️</div>
+              <div class="quiz-option-text">
+                <h4>Weekend Getaways</h4>
+                <p>Crisp, uplifting breezes under open skies</p>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div id="quizStep3" style="display:none">
+          <div class="quiz-question-title">3. Which base accord do you crave on your skin?</div>
+          <div class="quiz-question-sub">The lingering memory that endures after 8+ hours.</div>
+          <div class="quiz-options-grid">
+            <button class="quiz-option-btn" onclick="selectQuizOption('notes', 'amber', this)">
+              <div class="quiz-option-emoji">🪵</div>
+              <div class="quiz-option-text">
+                <h4>Warm Sandalwood & Amber</h4>
+                <p>Rich, creamy woody depths</p>
+              </div>
+            </button>
+            <button class="quiz-option-btn" onclick="selectQuizOption('notes', 'musk', this)">
+              <div class="quiz-option-emoji">🫧</div>
+              <div class="quiz-option-text">
+                <h4>Clean Cashmere Musk</h4>
+                <p>Soft, luxurious silk on bare skin</p>
+              </div>
+            </button>
+            <button class="quiz-option-btn" onclick="selectQuizOption('notes', 'cedar', this)">
+              <div class="quiz-option-emoji">🌲</div>
+              <div class="quiz-option-text">
+                <h4>White Cedar & Tea</h4>
+                <p>Crisp, peaceful green tranquility</p>
+              </div>
+            </button>
+            <button class="quiz-option-btn" onclick="selectQuizOption('notes', 'vanilla', this)">
+              <div class="quiz-option-emoji">🍨</div>
+              <div class="quiz-option-text">
+                <h4>Bourbon Vanilla Bean</h4>
+                <p>Comforting, sweet golden warmth</p>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Result -->
+        <div id="quizResultStep" class="quiz-result-card" style="display:none">
+          <div class="quiz-match-score">✨ 98% Match Discovered</div>
+          <img id="quizMatchImg" src="images/perfume-rose.png" alt="Matched perfume" class="quiz-result-img" />
+          <h3 id="quizMatchName" style="font-family:var(--font-serif);font-size:2rem;margin-bottom:8px">Rose Bloom</h3>
+          <div id="quizMatchNotes" style="color:var(--gold-primary);font-weight:600;font-size:0.9rem;margin-bottom:12px">May Rose, French Peony, White Musk</div>
+          <p id="quizMatchDesc" style="color:var(--text-mid);max-width:500px;margin:0 auto 24px;font-size:0.95rem">
+            A transcendent bouquet that mirrors your romantic, elegant essence.
+          </p>
+          <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+            <button class="btn-primary" id="quizMatchAction">View Fragrance Details →</button>
+            <button class="btn-secondary" onclick="restartQuiz()">Retake Quiz ↺</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ DISCOVERY SET PROMO BANNER ══ -->
+  <div class="container">
+    <div class="discovery-banner animate-in">
+      <div class="discovery-content">
+        <div class="section-tag" style="background:rgba(212,175,55,0.15);color:var(--gold-light)">Luxury Discovery Box</div>
+        <h3>Curate Your Own 3-Piece Discovery Flacon Set</h3>
+        <p>Can't pick just one? Choose any three 30ml travel atomizers encased in our signature gold-embossed keepsake case for only ₹3,999.</p>
+        <a href="shop.html" class="btn-primary">Build Your Discovery Box →</a>
+      </div>
+      <div class="discovery-bottles-preview">
+        <div class="discovery-mini-bottle"><span>🌸</span><em>Rose</em></div>
+        <div class="discovery-mini-bottle"><span>🍋</span><em>Citrus</em></div>
+        <div class="discovery-mini-bottle"><span>🌊</span><em>Aquatic</em></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ BRAND VALUES ══ -->
+  <section class="section values-section">
+    <div class="container">
+      <div class="section-header center animate-in">
+        <div class="section-tag">Haute Parfumerie Ethics</div>
+        <h2 class="section-title">Pure. Conscious. Timeless.</h2>
+        <p class="section-sub">We believe that true luxury honors both the wearer and the planet.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card animate-in">
+          <div class="value-icon" style="background:linear-gradient(135deg,var(--pink-light),#fff)">🌿</div>
+          <h4>100% Pure Botanicals</h4>
+          <p>Harvested ethically from sustainable family estates in Grasse, Sicily, and Mysore with zero synthetics.</p>
+        </div>
+        <div class="value-card animate-in" style="animation-delay:0.1s">
+          <div class="value-icon" style="background:linear-gradient(135deg,var(--blue-light),#fff)">🐰</div>
+          <h4>Cruelty-Free Certified</h4>
+          <p>Certified 100% vegan, clean-formulation, and Leaping Bunny cruelty-free across every fragrance.</p>
+        </div>
+        <div class="value-card animate-in" style="animation-delay:0.2s">
+          <div class="value-icon" style="background:linear-gradient(135deg,var(--lavender),#fff)">♻️</div>
+          <h4>Refillable Glass Flacons</h4>
+          <p>Recycled European crystal bottles engineered to be refilled for a lifetime of beauty.</p>
+        </div>
+        <div class="value-card animate-in" style="animation-delay:0.3s">
+          <div class="value-icon" style="background:linear-gradient(135deg,var(--gold-light),#fff)">✨</div>
+          <h4>12-Hour Extraction Sillage</h4>
+          <p>High parfum concentration (24%) ensures lingering projection from sunrise to deep midnight.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TESTIMONIALS ══ -->
+  <section class="section section-blue testimonials-section">
+    <div class="container">
+      <div class="section-header center animate-in">
+        <div class="section-tag">Verified Connoisseurs</div>
+        <h2 class="section-title">Whispers of Adoration</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate-in">
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <p>"Rose Bloom is intoxicating. It possesses the authentic sweetness of morning dew on petals. I receive compliments in every boardroom."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">PS</div>
+            <div><strong>Priya Sharma</strong><em>Verified Buyer • New Delhi</em></div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-in" style="animation-delay:0.1s">
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <p>"Citrus Glow is pure bottled Mediterranean sunshine. The sillage lasts through 10-hour days without ever turning heavy."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">AM</div>
+            <div><strong>Ananya Mehta</strong><em>Verified Buyer • Mumbai</em></div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-in" style="animation-delay:0.2s">
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <p>"Ocean Mist evokes cliffs overlooking the sea in Normandy. Crisp, sophisticated, and utterly distinct from mass-market scents."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">RK</div>
+            <div><strong>Riya Kapoor</strong><em>Verified Buyer • Bengaluru</em></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ NEWSLETTER ══ -->
+  <section class="newsletter-section">
+    <div class="newsletter-inner animate-in">
+      <div class="nl-text">
+        <div class="section-tag" style="background:rgba(212,175,55,0.2);color:var(--gold-light)">Private Atelier Access</div>
+        <h2>Enjoy 10% Off Your First Scent</h2>
+        <p>Subscribe to receive bespoke olfactory invitations, seasonal vintage previews, and complimentary sample vials.</p>
+      </div>
+      <form class="nl-form" id="nlForm" onsubmit="event.preventDefault(); handleNewsletterSubscription(document.getElementById('nlEmail').value); this.reset();">
+        <input type="email" placeholder="Enter your email address..." required id="nlEmail" />
+        <button type="submit">Join Atelier ✨</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">Your Scent 🌸</div>
+        <p>High-perfumery atelier dedicated to natural, botanical masterworks inspired by the earth's grandest aromas.</p>
+        <div class="footer-socials">
+          <a class="social-btn" href="#" title="Instagram">📷</a>
+          <a class="social-btn" href="#" title="Facebook">📘</a>
+          <a class="social-btn" href="#" title="Pinterest">📌</a>
+          <a class="social-btn" href="#" title="YouTube">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Collection</h4>
+        <ul>
+          <li><a href="shop.html?filter=floral">Floral Symphony</a></li>
+          <li><a href="shop.html?filter=fresh">Sunlit Citrus</a></li>
+          <li><a href="shop.html?filter=aquatic">Aquatic Reverie</a></li>
+          <li><a href="shop.html">Full Catalog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Maison</h4>
+        <ul>
+          <li><a href="about.html">The Atelier Story</a></li>
+          <li><a href="contact.html">Bespoke Concierge</a></li>
+          <li><a href="#">Complimentary Samples</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Private Circle</h4>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:14px">Get early vintage reservations and invitations to private scent launches.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); handleNewsletterSubscription(this.querySelector('input').value); this.reset();">
+          <input type="email" placeholder="Your email..." required />
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <span>© 2026 Your Scent Haute Parfumerie. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Ethical Sourcing Statement</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ CART SLIDE-OVER DRAWER ══ -->
+  <div class="drawer-overlay" id="cartOverlay"></div>
+  <aside class="side-drawer" id="cartSidebar">
+    <div class="drawer-header">
+      <h3>🛍️ Shopping Bag</h3>
+      <button class="drawer-close" id="cartClose" title="Close">✕</button>
+    </div>
+    <div class="drawer-items" id="cartItems"></div>
+    <div class="drawer-footer">
+      <div class="drawer-total-row">
+        <span class="drawer-total-label">Subtotal</span>
+        <span class="drawer-total-val" id="cartTotal">₹0</span>
+      </div>
+      <button class="btn-primary drawer-btn" onclick="openCheckoutModal()">Proceed to Checkout →</button>
+    </div>
+  </aside>
+
+  <!-- ══ WISHLIST SLIDE-OVER DRAWER ══ -->
+  <div class="drawer-overlay" id="wishlistOverlay"></div>
+  <aside class="side-drawer" id="wishlistDrawer">
+    <div class="drawer-header">
+      <h3>🤍 My Wishlist</h3>
+      <button class="drawer-close" id="wishlistClose" title="Close">✕</button>
+    </div>
+    <div class="drawer-items" id="wishlistItems"></div>
+    <div class="drawer-footer">
+      <a href="shop.html" class="btn-secondary drawer-btn" onclick="closeWishlist()">Continue Exploring →</a>
+    </div>
+  </aside>
+
+  <!-- ══ GLASSMORPHIC LIVE SEARCH MODAL ══ -->
+  <div class="search-modal-overlay" id="searchModal">
+    <div class="search-modal-box">
+      <div class="search-input-header">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="modalSearchInput" placeholder="Search by name, scent accord, or mood..." />
+        <span class="search-kbd">ESC</span>
+        <button class="drawer-close" id="searchModalClose" style="width:30px;height:30px;font-size:12px">✕</button>
+      </div>
+      <div class="search-quick-tags">
+        <span style="font-size:0.75rem;font-weight:700;color:var(--text-light);align-self:center;text-transform:uppercase">Trending:</span>
+        <button class="search-tag-pill" onclick="applySearchTag('Rose')">🌸 Rose</button>
+        <button class="search-tag-pill" onclick="applySearchTag('Citrus')">🍋 Citrus</button>
+        <button class="search-tag-pill" onclick="applySearchTag('Lavender')">🌿 Lavender</button>
+        <button class="search-tag-pill" onclick="applySearchTag('Aquatic')">🌊 Aquatic</button>
+        <button class="search-tag-pill" onclick="applySearchTag('Jasmine')">🌼 Jasmine</button>
+      </div>
+      <div class="search-results-box" id="searchResultsBox"></div>
+    </div>
+  </div>
+
+  <!-- ══ PRODUCT QUICK VIEW / SCENT DETAIL MODAL ══ -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="quickview-card">
+      <button class="quickview-close" onclick="closeQuickView()" title="Close">✕</button>
+      <div class="quickview-media">
+        <img id="qvImg" src="images/perfume-rose.png" alt="Perfume Preview" />
+      </div>
+      <div class="quickview-details">
+        <div class="quickview-tag" id="qvTag">Floral Collection</div>
+        <h2 class="quickview-title" id="qvTitle">Rose Bloom</h2>
+        <div class="quickview-rating" id="qvRating">★ 4.9 (312 reviews)</div>
+        <div class="quickview-price-wrap">
+          <span class="quickview-price" id="qvPrice">₹2,499</span>
+          <span class="quickview-price-orig" id="qvOrigPrice">₹3,200</span>
+        </div>
+        <p class="quickview-desc" id="qvDesc">An exquisite bouquet of morning-harvested Grasse roses.</p>
+
+        <!-- Olfactory Pyramid -->
+        <div class="olfactory-pyramid">
+          <div class="pyramid-header"><span>🌿</span> Olfactory Architecture</div>
+          <div class="pyramid-row">
+            <div class="pyramid-note-type">Top Notes:</div>
+            <div class="pyramid-notes" id="qvTopNotes">Pink Pepper, Dewy Bergamot, Sweet Lychee</div>
+          </div>
+          <div class="pyramid-row">
+            <div class="pyramid-note-type">Heart Notes:</div>
+            <div class="pyramid-notes" id="qvHeartNotes">May Rose, Velvet Peony, Violet Petals</div>
+          </div>
+          <div class="pyramid-row">
+            <div class="pyramid-note-type">Base Notes:</div>
+            <div class="pyramid-notes" id="qvBaseNotes">Cashmere Musk, White Amber, Tuscan Cedar</div>
+          </div>
+          <div class="pyramid-row" style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border)">
+            <div class="pyramid-note-type">Longevity:</div>
+            <div class="pyramid-notes" id="qvLongevity">10–12 Hours (Parfum Strength)</div>
+          </div>
+        </div>
+
+        <!-- Bottle Size Selector -->
+        <div class="size-selector-label">Select Flacon Size:</div>
+        <div class="size-options" id="qvSizes"></div>
+
+        <!-- Actions -->
+        <div class="quickview-actions">
+          <div class="quantity-picker">
+            <button onclick="changeQuickViewQty(-1)">−</button>
+            <span id="qvQtyVal">1</span>
+            <button onclick="changeQuickViewQty(1)">+</button>
+          </div>
+          <button class="btn-primary" style="flex:1" onclick="addQuickViewToCart()">Add to Bag 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ MULTI-STEP LUXURY CHECKOUT MODAL ══ -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="checkout-card">
+      <button class="quickview-close" onclick="closeCheckoutModal()" title="Close">✕</button>
+
+      <div class="checkout-stepper">
+        <div class="step-item active">
+          <div class="step-circle">1</div>
+          <div class="step-label">Delivery</div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">2</div>
+          <div class="step-label">Review & Promo</div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">3</div>
+          <div class="step-label">Payment</div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">4</div>
+          <div class="step-label">Confirmed</div>
+        </div>
+      </div>
+
+      <!-- Step 1: Shipping Address -->
+      <div class="checkout-step-content active" id="coStep1">
+        <h3 style="font-family:var(--font-serif);margin-bottom:6px">Shipping & Delivery Details</h3>
+        <p style="font-size:0.86rem;color:var(--text-light);margin-bottom:20px">Where should our courier deliver your fragrant package?</p>
+        
+        <div class="form-grid-2">
+          <div class="checkout-input-group">
+            <label>Recipient Name *</label>
+            <input type="text" id="shipName" placeholder="e.g. Radhika Sharma" required />
+          </div>
+          <div class="checkout-input-group">
+            <label>Phone Number *</label>
+            <input type="tel" id="shipPhone" placeholder="+91 98765 43210" required />
+          </div>
+        </div>
+        <div class="checkout-input-group">
+          <label>Email Address for Tracking</label>
+          <input type="email" id="shipEmail" placeholder="radhika@example.com" />
+        </div>
+        <div class="checkout-input-group">
+          <label>Street Address & Landmark *</label>
+          <input type="text" id="shipAddress" placeholder="Apartment / Villa, Suite, Street name" required />
+        </div>
+        <div class="form-grid-2">
+          <div class="checkout-input-group">
+            <label>City *</label>
+            <input type="text" id="shipCity" placeholder="e.g. Mumbai" value="Mumbai" />
+          </div>
+          <div class="checkout-input-group">
+            <label>Pincode *</label>
+            <input type="text" id="shipPincode" placeholder="400001" value="400001" />
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:flex-end;margin-top:20px">
+          <button class="btn-primary" onclick="nextCheckoutStep()">Continue to Review →</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Order Review & Promo Code -->
+      <div class="checkout-step-content" id="coStep2">
+        <h3 style="font-family:var(--font-serif);margin-bottom:6px">Review Order & Apply Promo</h3>
+        <p style="font-size:0.86rem;color:var(--text-light);margin-bottom:16px">Check your chosen perfumes and apply exclusive discount vouchers.</p>
+
+        <div id="checkoutItemsReview" style="max-height:180px;overflow-y:auto;margin-bottom:18px"></div>
+
+        <div class="promo-box">
+          <input type="text" id="promoInput" placeholder="Enter coupon (e.g. SCENT10)" />
+          <button class="btn-secondary" onclick="applyCouponCode()">Apply Voucher</button>
+        </div>
+        <div class="promo-tag-hint">💡 Tip: Use code <strong>SCENT10</strong> for 10% off or <strong>SPRING500</strong> for ₹500 off.</div>
+
+        <div style="background:var(--cream);padding:16px;border-radius:var(--radius-md);margin-bottom:20px;font-size:0.92rem">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+            <span>Subtotal:</span>
+            <strong id="coSubtotal">₹0</strong>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;color:#2e7d32">
+            <span>Voucher Discount:</span>
+            <strong id="coDiscount">₹0</strong>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+            <span>Signature Courier Delivery:</span>
+            <strong style="color:var(--gold-primary)">FREE (Complimentary)</strong>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border);font-size:1.15rem">
+            <strong>Total Payable:</strong>
+            <strong id="coTotal" style="color:var(--gold-primary)">₹0</strong>
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;margin-top:20px">
+          <button class="btn-secondary" onclick="prevCheckoutStep()">← Back</button>
+          <button class="btn-primary" onclick="nextCheckoutStep()">Proceed to Payment →</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Payment Method -->
+      <div class="checkout-step-content" id="coStep3">
+        <h3 style="font-family:var(--font-serif);margin-bottom:6px">Select Payment Method</h3>
+        <p style="font-size:0.86rem;color:var(--text-light);margin-bottom:18px">All transactions are encrypted with 256-bit bank-grade SSL security.</p>
+
+        <div class="payment-methods-grid">
+          <div class="payment-tab active" onclick="selectPaymentMethod('upi', this)">
+            <div class="pay-icon">📱</div>
+            <div class="pay-title">UPI / QR</div>
+          </div>
+          <div class="payment-tab" onclick="selectPaymentMethod('card', this)">
+            <div class="pay-icon">💳</div>
+            <div class="pay-title">Card</div>
+          </div>
+          <div class="payment-tab" onclick="selectPaymentMethod('cod', this)">
+            <div class="pay-icon">📦</div>
+            <div class="pay-title">Cash on Delivery</div>
+          </div>
+        </div>
+
+        <!-- UPI View -->
+        <div class="payment-details-view" id="upiPaymentView">
+          <div style="display:flex;align-items:center;gap:20px">
+            <div style="background:#fff;padding:10px;border-radius:10px;border:1px solid var(--border);text-align:center">
+              <div style="font-size:3.5rem">🏁</div>
+              <div style="font-size:0.75rem;font-weight:700">Scan via UPI</div>
+            </div>
+            <div>
+              <div style="font-weight:700;margin-bottom:4px">Instant UPI QR Code</div>
+              <p style="font-size:0.82rem;color:var(--text-light);margin-bottom:8px">Supports Google Pay, PhonePe, Paytm, and BHIM.</p>
+              <span style="font-size:0.78rem;background:var(--pink-light);padding:4px 10px;border-radius:4px;color:var(--gold-primary);font-weight:700">UPI ID: yourscent@luxurybank</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card View -->
+        <div class="payment-details-view" id="cardPaymentView" style="display:none">
+          <div class="checkout-input-group">
+            <label>Cardholder Name</label>
+            <input type="text" placeholder="Radhika Sharma" />
+          </div>
+          <div class="checkout-input-group">
+            <label>Card Number</label>
+            <input type="text" placeholder="4532 •••• •••• 8892" />
+          </div>
+          <div class="form-grid-2">
+            <div class="checkout-input-group">
+              <label>Expiry Date</label>
+              <input type="text" placeholder="MM / YY" />
+            </div>
+            <div class="checkout-input-group">
+              <label>CVV / CVC</label>
+              <input type="password" placeholder="•••" maxlength="4" />
+            </div>
+          </div>
+        </div>
+
+        <!-- COD View -->
+        <div class="payment-details-view" id="codPaymentView" style="display:none">
+          <div style="display:flex;align-items:center;gap:14px">
+            <div style="font-size:2.5rem">🚚</div>
+            <div>
+              <div style="font-weight:700">Pay upon delivery</div>
+              <p style="font-size:0.82rem;color:var(--text-light)">Pay in cash or through UPI upon receiving your tamper-proof perfume box.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;margin-top:20px">
+          <button class="btn-secondary" onclick="prevCheckoutStep()">← Back</button>
+          <button class="btn-primary" id="placeOrderBtn" onclick="nextCheckoutStep()">Authorize Luxury Order ✨</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Order Confirmation Receipt -->
+      <div class="checkout-step-content" id="coStep4">
+        <div class="order-success-view">
+          <div class="order-success-icon">✓</div>
+          <h2 style="font-family:var(--font-serif);font-size:1.8rem;margin-bottom:6px">Order Confirmed</h2>
+          <p style="color:var(--text-mid);font-size:0.92rem">Thank you for inviting Your Scent into your life. Our master atelier is preparing your flacons.</p>
+          
+          <div class="order-id-badge">Order ID: <span id="confirmedOrderId">YS-2026-894120</span></div>
+
+          <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--radius-md);padding:18px;max-width:440px;margin:0 auto 24px;text-align:left;font-size:0.85rem">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+              <span>Estimated Delivery:</span>
+              <strong>3–5 Business Days</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+              <span>Carrier:</span>
+              <strong>Maison Express Courier</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between">
+              <span>Tracking:</span>
+              <strong style="color:var(--gold-primary)">Live SMS & Email Alert Active</strong>
+            </div>
+          </div>
+
+          <button class="btn-primary" onclick="closeCheckoutModal()">Return to Boutique</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ TOAST ══ -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ══ CENTRALIZED CHATBOT ══ -->
+  <div id="chatbot-container">
+    <button id="chatbot-toggle" onclick="toggleChatbot()" title="Chat with Atelier Assistant">
+      <span id="chat-icon">💬</span>
+    </button>
+    <div id="chatbot-box">
+      <div id="chatbot-header">
+        <span>🌸 Your Scent Atelier Assistant</span>
+        <button onclick="toggleChatbot()" id="chatbot-close">✕</button>
+      </div>
+      <iframe src="https://www.chatbase.co/chatbot-iframe/uSy50_rFKP0U2ORtni0Ep" width="100%"
+        style="height:100%; min-height:420px; border:none;" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Render bestsellers on homepage
+    document.addEventListener('DOMContentLoaded', () => {
+      renderProducts('homeProducts', products.filter(p => p.bestseller), 4);
+    });
+  </script>
+</body>
+
+</html>

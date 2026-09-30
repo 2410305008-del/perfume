@@ -1,0 +1,7 @@
+const express = require('express');
+const router = express.Router();
+const { validateCoupon } = require('../controllers/couponsController');
+
+router.post('/validate', validateCoupon);
+
+module.exports = router;

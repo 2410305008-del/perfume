@@ -1,0 +1,604 @@
+[
+  {
+    "id": 1,
+    "name": "Rose Bloom",
+    "category": "floral",
+    "categoryLabel": "Floral",
+    "price": 2499,
+    "originalPrice": 3200,
+    "desc": "An exquisite bouquet of morning-harvested Grasse roses, blooming peony petals, and velvety white cashmere musk.",
+    "badge": "Bestseller",
+    "badgeClass": "badge-new",
+    "stars": 4.9,
+    "reviews": 312,
+    "bestseller": true,
+    "img": "images/perfume-rose.png",
+    "size": "50ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 1799,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 2499,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 3999,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "May Rose, French Peony, White Musk",
+    "pyramid": {
+      "top": "Pink Pepper, Dewy Bergamot, Sweet Lychee",
+      "heart": "May Rose, Velvet Peony, Violet Petals",
+      "base": "Cashmere Musk, White Amber, Tuscan Cedar"
+    },
+    "longevity": "10–12 Hours",
+    "sillage": "Moderate to Heavy",
+    "quizVibe": "floral",
+    "quizOccasion": "romantic"
+  },
+  {
+    "id": 2,
+    "name": "Lavender Dreams",
+    "category": "floral",
+    "categoryLabel": "Floral",
+    "price": 2199,
+    "originalPrice": 2800,
+    "desc": "Sun-drenched Provence lavender harmonized with soft French violet and a soothing, sensual Bourbon vanilla base.",
+    "badge": "New",
+    "badgeClass": "badge-fave",
+    "stars": 4.8,
+    "reviews": 198,
+    "bestseller": true,
+    "img": "images/perfume-lavender.png",
+    "size": "50ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 1599,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 2199,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 3599,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "Provence Lavender, Violet, Bourbon Vanilla",
+    "pyramid": {
+      "top": "Wild Lavender, Clary Sage, French Mint",
+      "heart": "Iris, Violet Blossom, Heliotrope",
+      "base": "Bourbon Vanilla, Tonka Bean, Sandalwood"
+    },
+    "longevity": "8–10 Hours",
+    "sillage": "Soft & Intimate",
+    "quizVibe": "calm",
+    "quizOccasion": "everyday"
+  },
+  {
+    "id": 3,
+    "name": "Jasmine Noir",
+    "category": "floral",
+    "categoryLabel": "Floral",
+    "price": 2699,
+    "originalPrice": 3400,
+    "desc": "Intoxicating night-blooming jasmine layered with creamy Mysore sandalwood, dark spices, and precious golden amber.",
+    "badge": "Limited",
+    "badgeClass": "badge-hot",
+    "stars": 4.9,
+    "reviews": 145,
+    "bestseller": false,
+    "img": "images/perfume-jasmine.png",
+    "size": "50ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 1999,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 2699,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 4299,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "Sambac Jasmine, Mysore Sandalwood, Golden Amber",
+    "pyramid": {
+      "top": "Bitter Almond, Neroli, Cardamom Pods",
+      "heart": "Sambac Jasmine, Night-blooming Cereus, Tuberose",
+      "base": "Mysore Sandalwood, Dark Amber, Patchouli"
+    },
+    "longevity": "12+ Hours",
+    "sillage": "Enchanting & Heavy",
+    "quizVibe": "mysterious",
+    "quizOccasion": "evening"
+  },
+  {
+    "id": 4,
+    "name": "Citrus Glow",
+    "category": "fresh",
+    "categoryLabel": "Fresh Citrus",
+    "price": 1999,
+    "originalPrice": 2600,
+    "desc": "Crisp Sicilian lemon peel and orange blossom kissed by Mediterranean sea mist and delicate green tea infusion.",
+    "badge": "Sale",
+    "badgeClass": "badge-sale",
+    "stars": 4.9,
+    "reviews": 276,
+    "bestseller": true,
+    "img": "images/perfume-citrus.png",
+    "size": "50ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 1499,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 1999,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 3299,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "Sicilian Lemon, Orange Blossom, Green Tea",
+    "pyramid": {
+      "top": "Sicilian Lemon, Bergamot, Mandora",
+      "heart": "Orange Blossom, Japanese Green Tea, Jasmine Water",
+      "base": "White Musk, Driftwood, Vetiver"
+    },
+    "longevity": "7–9 Hours",
+    "sillage": "Radiant & Energizing",
+    "quizVibe": "fresh",
+    "quizOccasion": "daytime"
+  },
+  {
+    "id": 5,
+    "name": "Lemonade Fizz",
+    "category": "fresh",
+    "categoryLabel": "Fresh Citrus",
+    "price": 1799,
+    "originalPrice": 2400,
+    "desc": "Sparkling Japanese yuzu, pink grapefruit, and effervescent mint leaves over a clean, crystalline cedarwood base.",
+    "badge": "Trending",
+    "badgeClass": "badge-new",
+    "stars": 4.6,
+    "reviews": 89,
+    "bestseller": false,
+    "img": "images/perfume-lemonade.png",
+    "size": "30ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 1799,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 2399,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 3699,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "Japanese Yuzu, Pink Grapefruit, White Cedar",
+    "pyramid": {
+      "top": "Yuzu, Pink Grapefruit, Sparkling Soda",
+      "heart": "Crushed Spearmint, Lemongrass, Lily of the Valley",
+      "base": "White Cedar, Clean Musk, Blonde Woods"
+    },
+    "longevity": "8 Hours",
+    "sillage": "Fresh & Sparkling",
+    "quizVibe": "fresh",
+    "quizOccasion": "daytime"
+  },
+  {
+    "id": 6,
+    "name": "Ocean Mist",
+    "category": "aquatic",
+    "categoryLabel": "Aquatic",
+    "price": 2299,
+    "originalPrice": 2900,
+    "desc": "The crisp purity of crashing Pacific waves, marine algae, and sun-bleached driftwood carrying salty ocean air.",
+    "badge": "Bestseller",
+    "badgeClass": "badge-new",
+    "stars": 4.8,
+    "reviews": 231,
+    "bestseller": true,
+    "img": "images/perfume-aquatic.png",
+    "size": "50ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 1699,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 2299,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 3799,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "Sea Salt, Marine Breeze, Sunken Driftwood",
+    "pyramid": {
+      "top": "Sea Breeze, Blue Calone, Crisp Cucumber",
+      "heart": "Water Lily, Marine Algae, Salty Air",
+      "base": "Driftwood, Ambergris Accord, Oakmoss"
+    },
+    "longevity": "9–11 Hours",
+    "sillage": "Airy & Vast",
+    "quizVibe": "aquatic",
+    "quizOccasion": "summer"
+  },
+  {
+    "id": 7,
+    "name": "Aqua Serenity",
+    "category": "aquatic",
+    "categoryLabel": "Aquatic",
+    "price": 2099,
+    "originalPrice": 2700,
+    "desc": "A tranquil mountain spring waterfall surrounded by chilled water lilies, crushed mint, and soothing powdery musk.",
+    "badge": "Rare",
+    "badgeClass": "badge-hot",
+    "stars": 4.7,
+    "reviews": 117,
+    "bestseller": false,
+    "img": "images/perfume-aqua-serenity.png",
+    "size": "30ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 2099,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 2799,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 4199,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "Crisp Mint, Water Lily, Soft Powder",
+    "pyramid": {
+      "top": "Glacial Mint, Morning Dew, Rain Accord",
+      "heart": "White Lotus, Blue Water Lily, Cyclamen",
+      "base": "Mineral Amber, Sheer Musk, Cashmeran"
+    },
+    "longevity": "8–10 Hours",
+    "sillage": "Subtle & Peaceful",
+    "quizVibe": "aquatic",
+    "quizOccasion": "everyday"
+  },
+  {
+    "id": 8,
+    "name": "Cherry Blossom",
+    "category": "floral",
+    "categoryLabel": "Floral",
+    "price": 2599,
+    "originalPrice": 3100,
+    "desc": "Whispers of Tokyo spring sakura blossoms entwined with ripe imperial lychee, white tea, and soft angelica musk.",
+    "badge": "Seasonal",
+    "badgeClass": "badge-new",
+    "stars": 4.9,
+    "reviews": 164,
+    "bestseller": false,
+    "img": "images/perfume-cherry-blossom.png",
+    "size": "50ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 1899,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 2599,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 4099,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "Kyoto Sakura, Imperial Lychee, Angelica Musk",
+    "pyramid": {
+      "top": "Imperial Lychee, Pink Freesia, Mandarin",
+      "heart": "Kyoto Cherry Blossom, White Peony, Rosebud",
+      "base": "Angelica Musk, Sandalwood, Clean Amber"
+    },
+    "longevity": "9–11 Hours",
+    "sillage": "Delicate & Romantic",
+    "quizVibe": "floral",
+    "quizOccasion": "romantic"
+  },
+  {
+    "id": 9,
+    "name": "Royal Oud Imperial",
+    "category": "woody",
+    "categoryLabel": "Woody & Oud",
+    "price": 3499,
+    "originalPrice": 4500,
+    "desc": "A regal masterpiece of rare aged Cambodian agarwood, distilled Taif rose, golden saffron threads, and warm smoked leather.",
+    "badge": "Crown Jewel",
+    "badgeClass": "badge-hot",
+    "stars": 5,
+    "reviews": 182,
+    "bestseller": true,
+    "img": "images/perfume-royal-oud.jpg",
+    "size": "50ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 2499,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 3499,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 5499,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "Cambodian Oud, Taif Rose, Golden Saffron",
+    "pyramid": {
+      "top": "Saffron Threads, Bergamot, Pink Peppercorn",
+      "heart": "Aged Cambodian Agarwood, Taif Rose, Frankincense",
+      "base": "Smoked Leather, Royal Ambergris, Dark Birch"
+    },
+    "longevity": "14+ Hours",
+    "sillage": "Majestic & Enveloping",
+    "quizVibe": "woody",
+    "quizOccasion": "evening"
+  },
+  {
+    "id": 10,
+    "name": "Aura de Santal",
+    "category": "woody",
+    "categoryLabel": "Woody & Amber",
+    "price": 2899,
+    "originalPrice": 3600,
+    "desc": "Creamy sustainable Mysore sandalwood wrapped in warm green cardamom, velvet orris root butter, and comforting cashmere woods.",
+    "badge": "Exclusive",
+    "badgeClass": "badge-new",
+    "stars": 4.9,
+    "reviews": 215,
+    "bestseller": false,
+    "img": "images/perfume-santal.jpg",
+    "size": "50ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 2099,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 2899,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 4499,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "Mysore Sandalwood, Orris Butter, Green Cardamom",
+    "pyramid": {
+      "top": "Green Cardamom, Australian Eucalyptus, Violet Leaf",
+      "heart": "Orris Butter, Papyrus, Warm Milk Accord",
+      "base": "Mysore Sandalwood, Virginia Cedarwood, Cashmeran"
+    },
+    "longevity": "11–13 Hours",
+    "sillage": "Warm & Elegant",
+    "quizVibe": "calm",
+    "quizOccasion": "everyday"
+  },
+  {
+    "id": 11,
+    "name": "Orchidee d'Or",
+    "category": "oriental",
+    "categoryLabel": "Oriental & Gourmand",
+    "price": 2799,
+    "originalPrice": 3500,
+    "desc": "Sun-cured Madagascar vanilla orchid pods steeped in aged oak cask cognac, roasted tonka bean crystals, and warm liquid amber.",
+    "badge": "Award Winner",
+    "badgeClass": "badge-fave",
+    "stars": 4.9,
+    "reviews": 340,
+    "bestseller": true,
+    "img": "images/perfume-vanilla.jpg",
+    "size": "50ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 1999,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 2799,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 4399,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "Madagascar Vanilla, Aged Cognac, Roasted Tonka",
+    "pyramid": {
+      "top": "Aged French Cognac, Candied Almond, Nutmeg",
+      "heart": "Vanilla Orchid, Cinnamon Bark, Roasted Tonka Bean",
+      "base": "Praline Amber, Bourbon Vanilla, Benzoin Siam"
+    },
+    "longevity": "12+ Hours",
+    "sillage": "Rich & Addictive",
+    "quizVibe": "mysterious",
+    "quizOccasion": "romantic"
+  },
+  {
+    "id": 12,
+    "name": "Nocturne Aethelred",
+    "category": "woody",
+    "categoryLabel": "Woody & Leather",
+    "price": 3199,
+    "originalPrice": 4100,
+    "desc": "Sleek Tuscan saddle leather kissed by midnight damson plum, spicy juniper berry, Indonesian dark patchouli, and smoky birch.",
+    "badge": "Private Reserve",
+    "badgeClass": "badge-hot",
+    "stars": 4.8,
+    "reviews": 128,
+    "bestseller": false,
+    "img": "images/perfume-leather.jpg",
+    "size": "50ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 2299,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 3199,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 4999,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "Tuscan Leather, Damson Plum, Smoky Birch",
+    "pyramid": {
+      "top": "Spiced Plum, Juniper Berries, Black Pepper",
+      "heart": "Tuscan Leather, Violet, Suede Accord",
+      "base": "Smoky Birch Tar, Dark Patchouli, Black Amber"
+    },
+    "longevity": "12–14 Hours",
+    "sillage": "Intense & Magnetic",
+    "quizVibe": "mysterious",
+    "quizOccasion": "evening"
+  },
+  {
+    "id": 13,
+    "name": "L'Or d'Oranger",
+    "category": "fresh",
+    "categoryLabel": "Fresh Citrus",
+    "price": 2399,
+    "originalPrice": 3000,
+    "desc": "An intoxicating journey along the French Cote d'Azur with blooming orange blossom, bright Calabrian neroli, petitgrain, and sunlit sea breezes.",
+    "badge": "Riviera Edition",
+    "badgeClass": "badge-new",
+    "stars": 4.8,
+    "reviews": 195,
+    "bestseller": false,
+    "img": "images/perfume-neroli.jpg",
+    "size": "50ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 1699,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 2399,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 3799,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "Neroli Riviera, Orange Blossom, White Honey",
+    "pyramid": {
+      "top": "Calabrian Bergamot, Mandarine Verte, Bitter Orange",
+      "heart": "Tunisian Neroli, Grasse Orange Blossom, Petitgrain",
+      "base": "White Cedar, Honeyed Amber, Sheer Musk"
+    },
+    "longevity": "8–10 Hours",
+    "sillage": "Radiant & Luminous",
+    "quizVibe": "fresh",
+    "quizOccasion": "daytime"
+  },
+  {
+    "id": 14,
+    "name": "Tubereuse de Nuit",
+    "category": "floral",
+    "categoryLabel": "Floral Extrait",
+    "price": 3299,
+    "originalPrice": 4200,
+    "desc": "Heady night-harvested Indian tuberose at peak nocturnal bloom, drenched in velvety white gardenia, creamy ylang-ylang, and warm amber wood.",
+    "badge": "Pure Extrait",
+    "badgeClass": "badge-hot",
+    "stars": 4.9,
+    "reviews": 167,
+    "bestseller": false,
+    "img": "images/perfume-tuberose.jpg",
+    "size": "50ml",
+    "sizes": [
+      {
+        "size": "30ml",
+        "price": 2399,
+        "label": "Travel Flacon"
+      },
+      {
+        "size": "50ml",
+        "price": 3299,
+        "label": "Signature 50ml"
+      },
+      {
+        "size": "100ml",
+        "price": 5199,
+        "label": "Grand Flacon"
+      }
+    ],
+    "notes": "Night Tuberose, White Gardenia, Creamy Ylang",
+    "pyramid": {
+      "top": "Pink Pepper, White Peach, Sparkling Mandarin",
+      "heart": "Nocturnal Tuberose, Gardenia Blossom, Jasmine Sambac",
+      "base": "Sandalwood Cream, Bourbon Vanilla, Benzoin Tears"
+    },
+    "longevity": "12+ Hours",
+    "sillage": "Hypnotic & Luxurious",
+    "quizVibe": "floral",
+    "quizOccasion": "romantic"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "name": "yourscent-fullstack",
+  "version": "2.0.0",
+  "description": "Haute Parfumerie Full Stack Web Application — React & Node.js",
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan,magenta\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "node backend/src/server.js",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "start": "node backend/src/server.js",
+    "install:all": "npm install && npm --prefix frontend install && npm --prefix backend install"
+  },
+  "keywords": [
+    "perfume",
+    "luxury",
+    "ecommerce",
+    "react",
+    "express",
+    "nodejs",
+    "vite"
+  ],
+  "author": "Your Scent Atelier",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
